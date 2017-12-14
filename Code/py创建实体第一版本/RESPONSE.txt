@@ -1,0 +1,80 @@
+
+/Users/frank/Desktop/CreateSwiftFile/
+
+
+REQUEST:
+{
+    "jsonrpc": "2.0",
+    "method": "L_Get_BranchList",
+    "params": {
+        "userGuid": "A4800B01-69F9-40E7-B041-EF8867AA1DD3"
+    },
+    "id": -9
+}
+
+
+RESPONSE:
+{
+     "jsonrpc": "2.0",
+     "result": {
+         "followMen":"张三,李四,王久减一",
+         "checkMan":"王大力",
+		 "list": [
+            {
+                "siteId": 24545,
+                "siteName": "123"
+            },
+            {
+                "siteId": 27545,
+                "siteName": "请问额"
+            }
+          ]
+     },
+    "id": -17
+}
+
+
+REQUEST:
+{
+    "jsonrpc": "2.0",
+    "method": "L_Get_TaskList",
+    "params": {
+        "userGuid": "A4800B01-69F9-40E7-B041-EF8867AA1DD3",
+        "type": 0,
+        "startDate": "2017-10-25",
+        "endDate": "2017-11-20",
+        "page":1,
+        "pageSize":10
+    },
+    "id": 1
+}
+
+
+RESPONSE:
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "list":[
+            {
+                "taskId": 1215,
+                "taskName": "大排档大检查",
+                "branchName": "皇家赌场",
+				  "customName": "牛B公司",
+                "status": 1,
+                "createTaskTime": "2016-09-02",
+				  "endTaskTime": "2016-09-03"
+            },
+            {
+                "taskId": 1216,
+                "taskName": "赌场大检查",
+                "branchName": "皇家赌场",
+				  "customName": "牛A公司",
+                " status ": -1,
+                "createTaskTime": "2016-09-02",
+				  "endTaskTime": "2016-09-03"
+            }
+        ]
+    },
+    "id": -17
+}
+
