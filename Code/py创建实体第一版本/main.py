@@ -12,6 +12,7 @@ inheritClass = 'NSObject'
 pathstring = '/Users/frank/Desktop/CreateSwiftFile/JsonFile'
 
 contents = Util.readFileString(pathstring)
+
 dic,filePath = Util.fileContentToDictionary(contents)
 
 

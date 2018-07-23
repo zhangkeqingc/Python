@@ -2,47 +2,15 @@
 /Users/frank/Desktop/CreateSwiftFile/
 
 
-REQUEST:
-{
-    "jsonrpc": "2.0",
-    "method": "L_Get_BranchList",
-    "params": {
-        "userGuid": "A4800B01-69F9-40E7-B041-EF8867AA1DD3"
-    },
-    "id": -9
-}
-
-
-RESPONSE:
-{
-     "jsonrpc": "2.0",
-     "result": {
-         "followMen":"张三,李四,王久减一",
-         "checkMan":"王大力",
-		 "list": [
-            {
-                "siteId": 24545,
-                "siteName": "123"
-            },
-            {
-                "siteId": 27545,
-                "siteName": "请问额"
-            }
-          ]
-     },
-    "id": -17
-}
 
 
 REQUEST:
 {
     "jsonrpc": "2.0",
-    "method": "L_Get_TaskList",
+    "method": "Q_Get_TaskList",
     "params": {
         "userGuid": "A4800B01-69F9-40E7-B041-EF8867AA1DD3",
-        "type": 0,
-        "startDate": "2017-10-25",
-        "endDate": "2017-11-20",
+        "taskType": 1,
         "page":1,
         "pageSize":10
     },
@@ -50,28 +18,29 @@ REQUEST:
 }
 
 
+
 RESPONSE:
 {
     "jsonrpc": "2.0",
     "result": {
-        "list":[
+        "list": [
             {
                 "taskId": 1215,
                 "taskName": "大排档大检查",
-                "branchName": "皇家赌场",
-				  "customName": "牛B公司",
                 "status": 1,
-                "createTaskTime": "2016-09-02",
-				  "endTaskTime": "2016-09-03"
+                "siteNames": "ATM,现金柜台",
+                "checkTaskTime": "每日",
+                "overTime": 0,
+                "finishTaskTime": "2017-09-21 09:00"
             },
             {
                 "taskId": 1216,
                 "taskName": "赌场大检查",
-                "branchName": "皇家赌场",
-				  "customName": "牛A公司",
-                " status ": -1,
-                "createTaskTime": "2016-09-02",
-				  "endTaskTime": "2016-09-03"
+                "status": 1,
+                "siteNames": "ATM,营业大厅",
+                "checkTaskTime": "09:00-10:00",
+                  "overTime": 0,
+                  "finishTaskTime": "2017-09-22 09:00"
             }
         ]
     },

@@ -17,16 +17,14 @@ def readFileString (fileName):
         all_the_text = file_object.read()
         contents1 = re.sub('[\r\n\t]', '', all_the_text)
         contents2 = contents1.replace(' ', '')
-        # contents3 = contents2.replace('RESPONSE:', '')
-        str = contents2
 
         # 获取到的json字符串
-        # print(contents3)
+        print(contents2)
 
     finally:
         file_object.close()
 
-    return str
+    return contents2
 
 
 
@@ -125,14 +123,15 @@ def toModelString(dicts,keyStr,inheritClass):
 def fileContentToDictionary(contents):
     filePath = '/Users/frank/Desktop/CreateSwiftFile/'  # 文件的保存路径 倒数第一步骤
     list = re.split(r"REQUEST:|RESPONSE:", contents)
+
     if len(list) > 0:
         filePath = list[0]
         del list[0]
     if len(list) % 2 != 0:
         del list[0]
-    # print('奇数', len(list))
-    # else:
-    #     print('偶数', len(list))
+        print('奇数', len(list))
+    else:
+        print('偶数', len(list))
 
     allDic = {}
     for i in range(int(len(list) / 2)):
